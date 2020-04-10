@@ -43,13 +43,9 @@ function main(blockedUsers) {
 		deleteMessages()
 	}
 }
-const blockedUsers = window.prompt('Entrez les numéros OU les noms des personnes à bloquer (séparé par un ";":').split(';');
-if (blockedUsers.length > 0) {
-	const intervalMS = 1000;
-	setInterval(function() {
-		main(blockedUsers)
-	}, intervalMS);
-}
-else {
-	window.alert("On dirait que tu n'as pas renseigné de numero. Actualise !");
-}
+
+const blockedUsers = [""];
+const intervalMS = 1000;
+setInterval(function() {
+	main(blockedUsers)
+}, intervalMS);
