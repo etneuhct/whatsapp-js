@@ -45,7 +45,7 @@ function main(blockedUsers) {
 }
 const blockedUsers = window.prompt('Entrez les numéros OU les noms des personnes à bloquer (séparé par un ";":').split(';');
 if (blockedUsers.length > 0) {
-	const intervalMS = 10000;
+	const intervalMS = 2000;
 	setInterval(function() {
 		main(blockedUsers)
 	}, intervalMS);
