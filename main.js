@@ -1,7 +1,7 @@
 function getBlockedUserMessage(userName, storage) {
 	const messagesToDelete = document.querySelectorAll('div[data-pre-plain-text*="' + userName + '"');
 	for (const messageToDelete of messagesToDelete) {
-		const messageToDeleteId = messageToDelete.parentElement.parentElement.parentElement.getAttribute("data-id");
+		const messageToDeleteId = messageToDelete.parentElement.parentElement.parentElement.parentElement.getAttribute("data-id");
 		storage.push(messageToDeleteId)
 	}
 }
@@ -40,12 +40,12 @@ function main(blockedUsers) {
 	if (messagesIds.length > 0) {
 		const mainMenu = document.querySelector('div#main div[title="Menu"][role="button"]');
 		selectMessages(mainMenu, messagesIds);
-		deleteMessages()
+		// deleteMessages()
 	}
 }
 const blockedUsers = window.prompt('Entrez les numéros OU les noms des personnes à bloquer (séparé par un ";":').split(';');
 if (blockedUsers.length > 0) {
-	const intervalMS = 1000;
+	const intervalMS = 10000;
 	setInterval(function() {
 		main(blockedUsers)
 	}, intervalMS);
