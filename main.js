@@ -40,7 +40,7 @@ function main(blockedUsers) {
 	if (messagesIds.length > 0) {
 		const mainMenu = document.querySelector('div#main div[title="Menu"][role="button"]');
 		selectMessages(mainMenu, messagesIds);
-		// deleteMessages()
+		deleteMessages()
 	}
 }
 const blockedUsers = window.prompt('Entrez les numéros OU les noms des personnes à bloquer (séparé par un ";":').split(';');
